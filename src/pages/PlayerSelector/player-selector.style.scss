@@ -1,0 +1,80 @@
+@import "../../styles/mixins.style.scss";
+@import "../../styles/variables.style.scss";
+
+.player-selector-page {
+  padding: 0 100px 50px 100px;
+
+  h2 {
+    font-size: 42px;
+    color: map-get($colors, primary);
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    &-card {
+      padding: 25px;
+      margin: 0 25px 25px 25px;
+      border-radius: 4px;
+      border: thin solid rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      background-color: map-get($colors, background);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 200px;
+      height: 240px;
+      cursor: pointer;
+      left: calc(50% - 100px);
+      bottom: -240px;
+      transition: background-color 0.5s, box-shadow 0.5s, border 0.5s, left 1s,
+        bottom 1s, opacity 1s;
+
+      .thumbnail {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+      }
+
+      span {
+        font-size: 16px;
+        color: map-get($colors, text);
+        font-weight: 500;
+        margin-top: 15px;
+        transition: color 0.5s;
+      }
+
+      &.active {
+        position: absolute;
+        bottom: calc(50% - 120px);
+        z-index: 10;
+      }
+
+      &.inactive {
+        opacity: 0;
+      }
+
+      &:hover {
+        background-color: map-get($colors, primary);
+        box-shadow: 0px 2px 1px -1px rgba(0, 84, 255, 0.2),
+          0px 1px 1px 0px rgba(0, 84, 255, 0.14),
+          0px 1px 3px 0px rgba(0, 84, 255, 0.12);
+        border: thin solid rgba(0, 84, 255, 0.25);
+
+        span {
+          color: map-get($colors, background);
+        }
+      }
+    }
+  }
+}

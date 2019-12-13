@@ -1,0 +1,23 @@
+$colors: (
+  "primary": #0054ff,
+  "secondary": #ff3465,
+  "tertiary": #6b6b6b,
+  "fourth": #58595b,
+  "border": #d3ddf2,
+  "title": #d3ddf2,
+  "text": rgba(0, 0, 0, 0.8),
+  "text-soft": rgba(0, 0, 0, 0.54),
+  "background": #ffffff,
+  "mobile-nav-border": #236bff,
+  "border-secondary": #b0bacf
+);
+
+$font: "Montserrat", sans-serif;
+$font-numbers: "Roboto", sans-serif;
+
+$responsive: (
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1280px,
+  "xlg": 1440px
+);
